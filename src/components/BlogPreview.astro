@@ -1,0 +1,93 @@
+---
+const posts = [
+  {
+    title: 'Membangun Arsitektur Microservices dengan Docker & Kubernetes',
+    excerpt: 'Pelajari bagaimana kami membangun arsitektur microservices yang scalable menggunakan Docker dan Kubernetes untuk klien enterprise.',
+    category: 'DevOps',
+    date: '5 Juni 2026',
+    readTime: '8 min read',
+    gradient: 'from-purple-500/20 to-pink-500/20',
+  },
+  {
+    title: 'Next.js 15: Fitur Baru yang Mengubah Cara Kami Build Web',
+    excerpt: 'Explorasi fitur-fitur terbaru Next.js 15 dan bagaimana framework ini meningkatkan performa dan developer experience.',
+    category: 'Development',
+    date: '28 Mei 2026',
+    readTime: '6 min read',
+    gradient: 'from-blue-500/20 to-cyan-500/20',
+  },
+  {
+    title: 'Prinsip UI/UX Design untuk Aplikasi SaaS Modern',
+    excerpt: 'Panduan lengkap prinsip desain UI/UX yang efektif untuk aplikasi SaaS, dari onboarding hingga daily usage.',
+    category: 'Design',
+    date: '20 Mei 2026',
+    readTime: '5 min read',
+    gradient: 'from-amber-500/20 to-orange-500/20',
+  },
+];
+---
+
+<section id="blog" class="py-24 relative">
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-dark-900/50 to-transparent"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="text-primary-400 font-semibold text-sm uppercase tracking-wider">Blog</span>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-white">
+        Insight & <span class="text-primary-400">Artikel Terbaru</span>
+      </h2>
+      <p class="mt-4 text-dark-300 max-w-2xl mx-auto">
+        Tips, tutorial, dan insight seputar teknologi dari tim Lookita Tech.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      {posts.map((post) => (
+        <article class="group bg-dark-900/50 border border-white/5 rounded-2xl overflow-hidden hover:border-primary-500/20 transition-all duration-300">
+          {/* Placeholder image */}
+          <div class={`h-48 bg-gradient-to-br ${post.gradient} flex items-center justify-center`}>
+            <svg class="w-12 h-12 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+            </svg>
+          </div>
+
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2.5 py-0.5 bg-primary-500/10 text-primary-300 text-xs font-medium rounded-full">
+                {post.category}
+              </span>
+              <span class="text-dark-500 text-xs">{post.readTime}</span>
+            </div>
+
+            <h3 class="text-lg font-semibold text-white group-hover:text-primary-300 transition-colors leading-snug mb-3">
+              {post.title}
+            </h3>
+
+            <p class="text-dark-400 text-sm leading-relaxed mb-4">
+              {post.excerpt}
+            </p>
+
+            <div class="flex items-center justify-between">
+              <span class="text-dark-500 text-xs">{post.date}</span>
+              <a href="#" class="text-primary-400 text-sm font-medium hover:text-primary-300 transition-colors flex items-center gap-1">
+                Baca
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="#" class="inline-flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium rounded-xl transition-all duration-200">
+        Lihat Semua Artikel
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

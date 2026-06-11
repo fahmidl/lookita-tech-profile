@@ -1,0 +1,23 @@
+{
+  "name": "lookita-tech-profile",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Lookita Tech - Company Profile & Blog Landing Page",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.7.10",
+    "@astrojs/tailwind": "^6.0.2",
+    "@astrojs/cloudflare": "^12.3.1",
+    "tailwindcss": "^3.4.17",
+    "@fontsource/inter": "^5.1.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
